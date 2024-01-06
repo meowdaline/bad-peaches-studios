@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Asset&family=BioRhyme+Expanded:wght@400;700;800&family=Gloock&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+/* font-family: 'Asset', cursive;
+font-family: 'BioRhyme Expanded', serif;
+font-family: 'Gloock', serif;
+font-family: 'Quicksand', sans-serif; */
+
+
+
+/* Color Palette: 
+Walnut Brown:    #4F4844   //   rgb(79,72,68)
+Salmon Pink:     #FF8B9C   //   rgb(255,139,156)
+Bright Pink:     #ED5A77   //   rgb(237,90,119)
+Amaranth Purple: #A12A40   //   rgb(161,42,64)
+Davy's Gray:     #515753   //   rgb(81,87,83) */
+
+
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'BioRhyme Expanded', serif;
+    color: #282b29;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #515753;
+}
+
+a {
+    text-decoration: none;
+    color: #f76a6a !important;
+}
+
+a:hover {
+    color: #b04a4a !important;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.row {
+    --bs-gutter-x: 0 !important;
+}
+
+/* NAV */
+.navbar {
+    background-color: #fff;
+    box-shadow: 1px -2px 46px -15px rgb(248, 149, 156, 0.68);
+    -webkit-box-shadow: 1px -2px 46px -15px rgb(248, 149, 156, 0.68);
+    -moz-box-shadow: 1px -2px 46px -15px rgb(248, 149, 156, 0.68);
+    font-family: 'BioRhyme Expanded', serif;
+}
+
+.nav-item {
+    margin-right: 10px
+}
+
+#logo {
+    width: 2.5em;
+}
+
+button.navbar-toggler {
+    border: none;
+}
+
+
+
+/* HERO */
+.hero {
+    background: no-repeat center/100% url(Assets/hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 80vh;
+}
+
+.hero-2 {
+    background: no-repeat center/100% url(Assets/hero.jpg);
+    background-size: cover;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* BODY */
+
+.img-right {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .odd {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+/* Gallery */
+.gallery {
+    width: 100%;
+}
+
+.gallery img {
+    height: 500px;
+
+    width: 30%;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery img {
+        min-width: 94%;
+    }
+}
+
+.gallery img:last-of-type {
+    margin-right: 0;
+}
+
+#numbertext {
+    padding: 15px 20px;
+}
+
+.previous,
+.next {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    padding: 15px 20px;
+    border: 1px solid #ffc1c1;
+    color: #ffc1c1 !important;
+
+}
+
+.previous:hover,
+.next:hover {
+    background-color: #ffc1c1;
+    color: #fff !important;
+}
+
+.previous {
+    margin-right: 5px;
+}
+
+
+.gallery-fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+
+/* CONTACT US - FORM  */
+
+.form-group {
+    margin-bottom: 1.2em;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input.form-control,
+textarea.form-control {
+    border: 0;
+    border-bottom: solid 1.5px rgba(81, 87, 83, 0.5);
+    background-color: rgba(81, 87, 83, 0.03);
+    /* border-radius: 0.375rem 0.375rem 0 0; */
+    border-radius: 0;
+    transition: border-color .15s ease-in-out, background-color .15s ease-in-out;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+    border-color: rgb(255, 139, 156);
+    /* box-shadow: 0 0 0 0.25rem rgba(255, 139, 156, .2); */
+    box-shadow: none;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.button-container button {
+    border-color: rgb(255, 139, 156);
+    color: rgb(255, 139, 156);
+}
+
+.button-container button:hover {
+    background-color: rgb(255, 139, 156);
+    color: #fff;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    box-shadow: 1px -2px 46px -15px rgb(248, 149, 156, 0.68);
+    -webkit-box-shadow: 1px -2px 46px -15px rgb(248, 149, 156, 0.68);
+    -moz-box-shadow: 1px -2px 46px -15px rgb(248, 149, 156, 0.68);
+}
+
+
+.footer {
+    background: no-repeat center/20% url(Assets/footer.jpeg);
+    height: 38vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        background-size: 55%;
+    }
+}
+
+
+#social-icons a {
+    text-decoration: none;
+    margin-right: 1em;
+    font-size: 1.1em;
+}
+
+#social-icons a:last-of-type {
+    margin-right: 0;
+}
+
+#copyright {
+    font-size: 0.8em;
+    color: #515753;
+}
